@@ -38,33 +38,60 @@ public class LinkedList {
     /*inserting n at ith location in the list */
     public void insertAt(int n,int i){
         Node newNode = new Node();
+        newNode.data = n;
+        if(i == 1){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
         Node temp = head;
-        int c = 1;
-        while(c<i-1 && temp!=null){
+        for(int j = 0 ;j<i-2;j++){
             temp = temp.next;
-            c++;
         }
         newNode.next = temp.next;
         temp.next = newNode;
     }
-    public Node reverse(){
-        Node prev = null;
-        while(head.next != null){
-            Node second = head.next;
-            head.next = prev;
-            prev = head;
-            head = second;
+    public void deleteNodeAt(int n){
+        if(n<1){
+            return;
         }
-        head.next = prev;
-        return head;
+        if(n==1){
+            head = head.next;
+            return;
+        }
+        Node temp = head;
+        for(int i = 0 ;i<n-2;i++){
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+    }
+    public void reverse(){
+        Node prev = null;
+        Node current = head;
+        Node next;
+        while(current != null){
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
     }
 
     public void printAll(Node head) {
         Node temp = head;
         while(temp!= null){
-            System.out.println(temp.getN());
+            System.out.print(temp.getN()+" ");
             temp = temp.next;
         }
+    }
+
+    public void printReverse(Node head){
+        if(head==null){
+            return;
+        }
+        printReverse(head.next);
+        System.out.print(head.data+" ");
     }
 
 }

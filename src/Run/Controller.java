@@ -14,8 +14,16 @@ public class Controller {
         l.insertAtBegining(300);
         l.insertAtEnd(7);
         l.insertAtBegining(200);
-        //l.insertAt(5,6);
-        //l.reverse();
+        l.insertAt(5,7);
+        l.deleteNodeAt(1);
         l.printAll(l.head);
+        l.reverse();
+        System.out.println();
+        l.printAll(l.head);
+        l.deleteNodeAt(1);
+        System.out.println();
+        l.printAll(l.head);
+        System.out.println();
+        l.printReverse(l.head);
     }
 }
