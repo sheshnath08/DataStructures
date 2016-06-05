@@ -4,14 +4,14 @@ package List;
  * Created by sheshnath on 5/31/2016.
  */
 public class Node {
-    private int n;
+    int data;
     Node next;
-    Node(int n){
-        this.n = n;
+    Node(){
+        this.data = 0;
         this.next = null;
     }
     int getN(){
-        return n;
+        return data;
     }
 
 }
