@@ -1,4 +1,4 @@
-package List;
+package BasicDataStructures;
 
 /**
  * Created by sheshnath on 5/31/2016.

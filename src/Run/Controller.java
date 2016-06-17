@@ -1,29 +1,25 @@
 package Run;
 
-import List.LinkedList;
+import BasicDataStructures.LinkedList;
+import BasicDataStructures.Stack;
 
 /**
  * Created by sheshnath on 6/1/2016.
  */
 public class Controller {
     public static void main(String args[]){
-        LinkedList l = new LinkedList();
-        l.insertAtEnd(4);
-        l.insertAtEnd(2);
-        l.insertAtEnd(6);
-        l.insertAtBegining(300);
-        l.insertAtEnd(7);
-        l.insertAtBegining(200);
-        l.insertAt(5,7);
-        l.deleteNodeAt(1);
-        l.printAll(l.head);
-        l.reverse();
-        System.out.println();
-        l.printAll(l.head);
-        l.deleteNodeAt(1);
-        System.out.println();
-        l.printAll(l.head);
-        System.out.println();
-        l.printReverse(l.head);
+        Stack s = new Stack();
+        s.push(4);
+        s.push(5);
+        System.out.println(s.maxElement());
+        s.printStackElement();
+        s.pop();
+        System.out.println(s.maxElement());
+        s.printStackElement();
+        s.pop();
+        s.pop();
+        s.push(3);
+        System.out.println(s.maxElement());
+        s.printStackElement();
     }
 }

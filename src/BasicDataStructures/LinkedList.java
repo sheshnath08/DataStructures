@@ -1,4 +1,4 @@
-package List;
+package BasicDataStructures;
 
 /**
  * Created by sheshnath on 5/31/2016.
@@ -92,6 +92,40 @@ public class LinkedList {
         }
         printReverse(head.next);
         System.out.print(head.data+" ");
+    }
+
+    public Node mergeSortedList(Node l1, Node l2){
+        Node result = new Node();
+        Node head;
+        Node temp1 = l1;
+        Node temp2 = l2;
+        if(l1.data<=l2.data){
+            head = l1;
+            result = temp1;
+            temp1 = temp1.next;
+        }
+        else{
+            head = l2;
+            result = temp2;
+            temp2 = temp2.next;
+        }
+        while(temp1 == null || temp2 == null){
+            if(temp1.data<=temp2.data){
+                result.next = temp1;
+                temp1 = temp1.next;
+            }
+            else{
+                result.next = temp2;
+                temp2 = temp2.next;
+            }
+        }
+        if(temp1 ==  null){
+            result.next = temp2;
+        }
+        else{
+            result.next = temp1;
+        }
+        return head;
     }
 
 }
