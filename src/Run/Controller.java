@@ -1,5 +1,6 @@
 package Run;
 
+import Applications.StackApplications;
 import BasicDataStructures.LinkedList;
 import BasicDataStructures.Stack;
 
@@ -8,18 +9,10 @@ import BasicDataStructures.Stack;
  */
 public class Controller {
     public static void main(String args[]){
-        Stack s = new Stack();
-        s.push(4);
-        s.push(5);
-        System.out.println(s.maxElement());
-        s.printStackElement();
-        s.pop();
-        System.out.println(s.maxElement());
-        s.printStackElement();
-        s.pop();
-        s.pop();
-        s.push(3);
-        System.out.println(s.maxElement());
-        s.printStackElement();
+       String s = "[]()({})[({}()]";
+        String s1 = "12+2-";
+        StackApplications sa = new StackApplications();
+        System.out.println(sa.isBalancedParanthesis(s));
+        System.out.println(sa.evaluatePostFix(s1));
     }
 }
