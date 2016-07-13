@@ -1,6 +1,8 @@
 package Applications;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -27,6 +29,51 @@ public class StackApplications {
             result = true;
         }
         return result;
+    }
+
+    public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
+        List <int[]> res = new ArrayList<>();
+        int count =0;
+        int[] a;
+        for(int i=0,j=0;count < k; ){
+            a = new int[2];
+            if(nums1[i]<nums2[j]){
+                a[0] = nums1[i];
+                a[1] = nums2[j];
+                res.add(a);
+                j++;
+                count ++;
+            }
+            else if (nums1[i]==nums2[j]){
+                a[0] = nums1[i];
+                a[1] = nums2[j];
+                res.add(a);
+                if(i+1 < nums1.length && j+1 < nums2.length){
+                    if(nums1[i+1] < nums2[j+1]){
+                        i++;
+                    }
+                    else {
+                        j++;
+                    }
+                }
+                else{
+                    if(i+1 < nums1.length){
+                       i++;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                count++;
+            }
+            else{
+                a[0] = nums2[j];
+                a[1] = nums1[i];
+                i++;
+                count++;
+            }
+        }
+        return res;
     }
 
     public int evaluatePostFix(String exp){
