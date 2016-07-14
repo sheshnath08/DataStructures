@@ -8,7 +8,7 @@ public class BinaryTree {
     public BinaryTree(){
         root = null;
     }
-    //methdo to insert data onto binary tree
+    //method to insert data onto binary tree
     public void insert(int data){
         Node temp = new Node();
         temp.data = data;
@@ -38,4 +38,28 @@ public class BinaryTree {
 
         }
     }
+
+    /*Method to print elements inOrder*/
+    public void inorder(){
+
+    }
+
+    /*Method for preorder traversal*/
+    public void preorder(){
+
+    }
+    /*Method for postorder traversal*/
+    public void postorder(){
+
+    }
+
+    /*method for Depth First Search*/
+    public void depthFirst(){
+
+    }
+    /*Method for Breadth first Search*/
+    public void breadthFirstSearch(){
+
+    }
+
 }
