@@ -1,3 +1,4 @@
 # Trees
-This repo is all about tree data data structures
+This Directory contains implementations of trees.
+
 # 1) Binary Tree

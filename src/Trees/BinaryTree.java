@@ -41,24 +41,50 @@ public class BinaryTree {
 
     /*Method to print elements inOrder*/
     public void inorder(){
-
+        inordrHelper(root);
+        System.out.println();
     }
-
+    void inordrHelper(Node node){
+        if(node == null){
+            return;
+        }
+        inordrHelper(node.left);
+        System.out.print(node.data +" ");
+        inordrHelper(node.right);
+    }
     /*Method for preorder traversal*/
     public void preorder(){
-
+        preoderHelper(root);
+    }
+    void preoderHelper(Node node){
+        if(node == null){
+            return;
+        }
+        System.out.print(node.data + " ");
+        preoderHelper(node.left);
+        preoderHelper(node.right);
     }
     /*Method for postorder traversal*/
     public void postorder(){
+        System.out.println();
+        postorderHelper(root);
+    }
 
+    private void postorderHelper(Node node) {
+        if(node == null){
+            return;
+        }
+        postorderHelper(node.left);
+        postorderHelper(node.right);
+        System.out.print(node.data+ " ");
     }
 
     /*method for Depth First Search*/
-    public void depthFirst(){
+    public void depthFirst(int key){
 
     }
     /*Method for Breadth first Search*/
-    public void breadthFirstSearch(){
+    public void breadthFirstSearch(int key){
 
     }
 

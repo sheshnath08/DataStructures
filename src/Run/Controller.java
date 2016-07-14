@@ -24,5 +24,8 @@ public class Controller {
         bt.insert(10);
         bt.insert(3);
         bt.insert(0);
+        bt.inorder();
+        bt.postorder();
+        bt.preorder();
     }
 }
