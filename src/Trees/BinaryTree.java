@@ -1,5 +1,7 @@
 package Trees;
 
+import java.util.ArrayList;
+
 /**
  * Created by sheshnath on 7/12/2016.
  */
@@ -54,6 +56,7 @@ public class BinaryTree {
     }
     /*Method for preorder traversal*/
     public void preorder(){
+        System.out.println();
         preoderHelper(root);
     }
     void preoderHelper(Node node){
@@ -87,5 +90,6 @@ public class BinaryTree {
     public void breadthFirstSearch(int key){
 
     }
+
 
 }
