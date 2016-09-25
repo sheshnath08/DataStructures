@@ -14,12 +14,12 @@ public class Queue {
     public void insert(int x){
         Node n = new Node();
         n.data = x;
-        if(rear==null){
+        if(isEmpty()){
             rear = n;
             front = n;
         }
         else{
-            n.next = rear;
+            rear.next = n;
             rear = n;
         }
     }
@@ -29,13 +29,7 @@ public class Queue {
                 front = rear = null;
             }
             else{
-
-                Node temp = rear;
-                while (temp.next != front){
-                    temp = temp.next;
-                }
-                temp.next = null;
-                front = temp;
+                front = front.next;
             }
         }
     }
