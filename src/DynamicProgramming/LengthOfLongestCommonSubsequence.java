@@ -2,6 +2,11 @@ package DynamicProgramming;
 
 /**
  * Created by sheshnath on 11/21/2016.
+ * Recurrence relation here is:(i and J refers to char at i stringA and StringB respectively
+ * if i==j:
+ * 1+T[i-1][j-1]
+ * else:
+ * T[i-1][j]
  */
 public class LengthOfLongestCommonSubsequence {
     public static void main(String args[]){
