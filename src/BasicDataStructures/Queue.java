@@ -42,4 +42,5 @@ public class Queue {
     public boolean isEmpty(){
         return front == null;
     }
+
 }

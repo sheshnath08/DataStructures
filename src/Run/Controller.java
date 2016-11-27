@@ -6,6 +6,7 @@ import BasicDataStructures.LinkedList;
 import Trees.BinaryTree;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Stack;
 
 /**
@@ -31,19 +32,22 @@ public class Controller {
         System.out.println(sb.toString());*/
        /* System.out.println((int)Math.sqrt(a));
         System.out.println(binarySearch(nums,3));*/
-
+/*
         String s = "dir1\n" +
                 " dir12\n"+
                 "  picture.jpeg\n"+
                 "dir2\n"+
                 " test.png";
 
-        System.out.println(myMethod(s));
+        System.out.println(myMethod(s));*/
 
        /* String s1 = "this is\n" +
                 "to.png" +
                 "how it works";
         System.out.println(findTotalAbsoluteLength(s1));*/
+
+        int a[] = {9,2,5,5,1,9,10,8};
+        System.out.print(isSum(a,10));
 
     }
 
@@ -116,4 +120,23 @@ public class Controller {
         }
         return totalAbsoluteLength;
     }
+
+    public static boolean isSum(int[] a, int k){
+        boolean ans = false;
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int i=0;i<a.length;i++){
+            if(map.containsKey(k-a[i])){
+                System.out.println(map.toString());
+                return true;
+            }
+            else{
+                map.put(a[i],1);
+            }
+        }
+        return ans;
+
+    }
+
+
+
 }
